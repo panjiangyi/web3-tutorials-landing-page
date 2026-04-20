@@ -8,7 +8,7 @@ const guarantees = [
   { icon: Users, text: "专属学员群终身答疑" },
 ]
 
-const futurePaths = ["DeFi", "NFT", "Layer2", "DAO"]
+const futurePaths = ["Solidity", "Foundry", "React + Wagmi", "DApp 全栈"]
 
 export function FinalCTA() {
   return (

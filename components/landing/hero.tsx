@@ -6,10 +6,16 @@ import { ArrowRight, Zap, Clock, Code, Rocket } from "lucide-react"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
-      <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
+      {/* Background image */}
+      <picture>
+        <source media="(min-width: 768px)" srcSet="/bg-desktop.jpg" />
+        <img
+          src="/bg-mobile.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
+      <div className="absolute inset-0 bg-background/80" />
 
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -21,8 +27,8 @@ export function Hero() {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
-            7天从Web2到Web3
-            <span className="block text-primary">完整转型实战营</span>
+            从Web2到Web3
+            <span className="block text-primary">七天以太坊学习计划</span>
           </h1>
 
           {/* Subtitle */}
