@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background to-background" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
-      
+
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
@@ -18,31 +18,30 @@ export function Hero() {
             <Zap className="w-4 h-4" />
             <span>限时开放报名中</span>
           </div>
-          
+
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight text-balance">
             7天从Web2到Web3
             <span className="block text-primary">完整转型实战营</span>
           </h1>
-          
+
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
             帮助学习者在7天内建立从合约开发到DApp部署的完整能力闭环
             <br className="hidden md:block" />
             聚焦以太坊开发普及与实战，降低Web3学习门槛
           </p>
-          
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
-              立即报名训练营
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-border text-foreground hover:bg-secondary">
-              查看课程详情
-            </Button>
+
+          {/* CTA Button */}
+          <div className="flex items-center justify-center gap-4 mb-16">
+            <a href="https://flowus.cn/share/533b1da3-8433-4ca7-95f5-f673a69c7143" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
+                立即报名训练营
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
           </div>
-          
+
           {/* Value propositions */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
@@ -63,7 +62,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">

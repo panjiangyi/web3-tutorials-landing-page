@@ -1,10 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, MessageCircle, Calendar, Shield, RefreshCw, Users } from "lucide-react"
+import { ArrowRight, MessageCircle, RefreshCw, Users } from "lucide-react"
 
 const guarantees = [
-  { icon: Shield, text: "7天无理由退款保证" },
   { icon: RefreshCw, text: "1年内免费复训" },
   { icon: Users, text: "专属学员群终身答疑" },
 ]
@@ -40,16 +39,14 @@ export function FinalCTA() {
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Button size="lg" className="w-full sm:w-auto text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
-              立即报名7天训练营
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg px-8 py-6 border-border text-foreground hover:bg-secondary">
-              <Calendar className="mr-2 w-5 h-5" />
-              查看课程详情
-            </Button>
+          {/* CTA Button */}
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <a href="https://flowus.cn/share/533b1da3-8433-4ca7-95f5-f673a69c7143" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
+                立即报名7天训练营
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
           </div>
 
           {/* Secondary CTA */}
