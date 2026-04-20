@@ -34,6 +34,19 @@ export function Footer() {
             <p className="text-sm text-muted-foreground">
               &copy; 2026 七天以太坊学习计划. All rights reserved.
             </p>
+            <a
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors mt-2"
+            >
+              <img
+                src="/icon-gongan.png"
+                alt="公安网"
+                className="w-4 h-4"
+              />
+              鄂ICP备2026018586号
+            </a>
           </div>
         </div>
       </div>
