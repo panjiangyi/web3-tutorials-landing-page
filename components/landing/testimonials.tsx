@@ -30,7 +30,7 @@ export function Testimonials() {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              7天训练营
+              7天课程
               <span className="text-primary">真实转型案例</span>
             </h2>
             <p className="text-muted-foreground text-lg">

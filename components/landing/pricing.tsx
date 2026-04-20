@@ -55,7 +55,7 @@ export function Pricing() {
                 推荐方案
               </div>
 
-              <h3 className="text-lg font-semibold text-primary mb-6">7天训练营</h3>
+              <h3 className="text-lg font-semibold text-primary mb-6">7天课程</h3>
               
               {/* Price */}
               <div className="mb-6">

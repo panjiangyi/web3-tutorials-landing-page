@@ -42,7 +42,7 @@ export function Hero() {
           <div className="flex items-center justify-center gap-4 mb-16">
             <a href="https://flowus.cn/share/533b1da3-8433-4ca7-95f5-f673a69c7143" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
-                立即报名训练营
+                立即报名
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>

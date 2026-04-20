@@ -43,7 +43,7 @@ export function FinalCTA() {
           <div className="flex items-center justify-center gap-4 mb-12">
             <a href="https://flowus.cn/share/533b1da3-8433-4ca7-95f5-f673a69c7143" target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="text-lg px-8 py-6 bg-primary hover:bg-primary/90 text-primary-foreground">
-                立即报名7天训练营
+                立即报名课程
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </a>
