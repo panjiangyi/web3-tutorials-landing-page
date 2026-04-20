@@ -60,12 +60,12 @@ export function Pricing() {
               {/* Price */}
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-foreground">¥1,999</span>
-                  <span className="text-lg text-muted-foreground line-through">¥3,999</span>
+                  <span className="text-4xl font-bold text-foreground">¥59.9</span>
+                  <span className="text-lg text-muted-foreground line-through">¥128</span>
                 </div>
                 <div className="flex items-center gap-2 mt-2 text-primary text-sm">
                   <Clock className="w-4 h-4" />
-                  <span>早鸟优惠进行中</span>
+                  <span>限时优惠进行中</span>
                 </div>
               </div>
 

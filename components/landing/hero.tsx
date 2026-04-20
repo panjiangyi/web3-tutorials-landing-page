@@ -27,9 +27,9 @@ export function Hero() {
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed text-pretty">
-            跟着一线Web3架构师，用现代化工具栈快速掌握以太坊开发
+            帮助学习者在7天内建立从合约开发到DApp部署的完整能力闭环
             <br className="hidden md:block" />
-            从认知建立到项目部署的完整路径
+            聚焦以太坊开发普及与实战，降低Web3学习门槛
           </p>
           
           {/* CTA Buttons */}
@@ -46,10 +46,10 @@ export function Hero() {
           {/* Value propositions */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              { icon: Clock, text: "7天密集训练", subtext: "无需长期投入" },
-              { icon: Code, text: "现代化技术栈", subtext: "Foundry + Wagmi" },
-              { icon: Rocket, text: "实战导向", subtext: "每天编码任务" },
-              { icon: Zap, text: "快速上手", subtext: "完整转型路径" },
+              { icon: Rocket, text: "认知化", subtext: "建立Web3核心概念体系" },
+              { icon: Code, text: "开发化", subtext: "Solidity合约设计与编写" },
+              { icon: Zap, text: "工程化", subtext: "Foundry测试与部署流程" },
+              { icon: Clock, text: "实战化", subtext: "完成完整DApp开发闭环" },
             ].map((item, index) => (
               <div
                 key={index}

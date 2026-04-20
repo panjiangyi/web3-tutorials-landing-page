@@ -1,32 +1,59 @@
-import { Target, RefreshCw, Dumbbell, Rocket } from "lucide-react"
+import { Eye, Code, Wrench, Layout, Rocket, Target, RefreshCw, Dumbbell, Zap } from "lucide-react"
 
-const advantages = [
+const coreFramework = [
   {
-    icon: Target,
-    title: "专注度最佳",
-    description: "7天内保持高度专注，避免拖延症",
+    icon: Eye,
+    title: "认知化",
+    description: "理解Web3、以太坊、钱包、交易与智能合约等基础概念",
+    color: "bg-primary/10 text-primary",
   },
   {
-    icon: RefreshCw,
-    title: "知识连贯性",
-    description: "每天内容环环相扣，形成完整知识体系",
+    icon: Code,
+    title: "开发化",
+    description: "系统学习Solidity语法、标准协议与合约设计",
+    color: "bg-chart-3/10 text-chart-3",
   },
   {
-    icon: Dumbbell,
-    title: "习惯养成",
-    description: "7天足以建立Web3开发的思维习惯",
+    icon: Wrench,
+    title: "工程化",
+    description: "使用Foundry工具链进行测试、调试、脚本与部署",
+    color: "bg-accent/10 text-accent",
+  },
+  {
+    icon: Layout,
+    title: "集成化",
+    description: "结合React与Wagmi实现前端与合约的交互",
+    color: "bg-primary/10 text-primary",
   },
   {
     icon: Rocket,
-    title: "快速见效",
-    description: "第7天就能部署自己的DApp项目",
+    title: "实战化",
+    description: "完成测试网部署与验证，形成完整DApp开发闭环",
+    color: "bg-chart-3/10 text-chart-3",
   },
 ]
 
-const phases = [
-  { days: "前3天", content: "概念建立 + 核心技能", color: "bg-primary" },
-  { days: "中2天", content: "工程化 + 前端集成", color: "bg-chart-3" },
-  { days: "后2天", content: "优化 + 部署实战", color: "bg-accent" },
+const coreFeatures = [
+  {
+    icon: Target,
+    title: "完整路径覆盖",
+    description: "从认知到部署的全流程实践",
+  },
+  {
+    icon: Dumbbell,
+    title: "实操导向",
+    description: "以真实开发任务为核心，减少理论空谈",
+  },
+  {
+    icon: RefreshCw,
+    title: "工程思维",
+    description: "强调测试、验证与规范化开发流程",
+  },
+  {
+    icon: Zap,
+    title: "效率优先",
+    description: "聚焦关键知识，避免无效摸索",
+  },
 ]
 
 export function WhySevenDays() {
@@ -37,17 +64,40 @@ export function WhySevenDays() {
           {/* Section header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              为什么是7天？
-              <span className="text-primary">科学的学习节奏设计</span>
+              五阶递进式学习
+              <span className="text-primary">完整能力闭环</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              不是随意设定的数字，而是经过验证的最佳学习周期
+              不是随意拼凑的课程，而是从认知到实战的科学递进体系
             </p>
           </div>
 
-          {/* Advantages grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-            {advantages.map((item, index) => (
+          {/* 5化 Framework */}
+          <div className="mb-16">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-0 md:justify-center">
+              {coreFramework.map((item, index) => (
+                <div key={index} className="flex-1 relative">
+                  <div className="p-6 rounded-xl bg-card border border-border text-center h-full mx-1 hover:border-primary/50 transition-all">
+                    <div className={`w-12 h-12 rounded-full ${item.color} flex items-center justify-center mx-auto mb-4`}>
+                      <item.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                  {index < coreFramework.length - 1 && (
+                    <div className="hidden md:block absolute top-1/2 -right-1 w-3 h-0.5 bg-primary/40" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Core Features */}
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-foreground">核心特色</h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {coreFeatures.map((item, index) => (
               <div
                 key={index}
                 className="p-6 rounded-xl bg-card border border-border text-center group hover:border-primary/50 transition-all"
@@ -59,29 +109,6 @@ export function WhySevenDays() {
                 <p className="text-sm text-muted-foreground">{item.description}</p>
               </div>
             ))}
-          </div>
-
-          {/* Learning phases */}
-          <div className="p-6 md:p-8 rounded-2xl bg-card border border-border">
-            <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-              学习节奏规划
-            </h3>
-            <div className="flex flex-col md:flex-row gap-4">
-              {phases.map((phase, index) => (
-                <div key={index} className="flex-1 relative">
-                  <div className="p-4 rounded-xl bg-secondary/50 border border-border">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className={`w-3 h-3 rounded-full ${phase.color}`} />
-                      <span className="font-medium text-foreground">{phase.days}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground">{phase.content}</p>
-                  </div>
-                  {index < phases.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-0.5 bg-border" />
-                  )}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>

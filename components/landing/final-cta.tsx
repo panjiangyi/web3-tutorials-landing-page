@@ -9,6 +9,8 @@ const guarantees = [
   { icon: Users, text: "专属学员群终身答疑" },
 ]
 
+const futurePaths = ["DeFi", "NFT", "Layer2", "DAO"]
+
 export function FinalCTA() {
   return (
     <section className="py-24 bg-secondary/30 relative overflow-hidden">
@@ -22,9 +24,21 @@ export function FinalCTA() {
             现在开始你的
             <span className="text-primary">7天Web3转型之旅</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            不要让犹豫成为你错过机会的原因，今天就迈出第一步
+          <p className="text-lg text-muted-foreground mb-6 max-w-xl mx-auto">
+            以7天计划为起点，完成从入门到实践者的转变，为深入进阶方向打下坚实基础
           </p>
+
+          {/* Future paths */}
+          <div className="flex items-center justify-center gap-3 mb-10">
+            {futurePaths.map((path, index) => (
+              <span
+                key={index}
+                className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium"
+              >
+                {path}
+              </span>
+            ))}
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

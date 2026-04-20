@@ -95,7 +95,7 @@ export function Urgency() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              48小时后恢复原价 ¥3,999
+              限时优惠价 ¥59.9，原价 ¥128
             </p>
           </div>
         </div>
