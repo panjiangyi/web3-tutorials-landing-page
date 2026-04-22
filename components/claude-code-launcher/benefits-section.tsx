@@ -3,23 +3,23 @@ import { Code2, Cpu, Shield, Zap } from "lucide-react"
 const benefits = [
   {
     icon: Zap,
-    title: "零配置",
-    description: "source 一个文件就能用，不装依赖，不碰 git config",
+    title: "一键安装",
+    description: "npm install -g cc-launch，一行命令搞定，支持 Zsh / Bash",
   },
   {
     icon: Shield,
     title: "安全可靠",
-    description: "不 force delete，不覆盖已有目录，合并检查 + 工作区干净检查双重保护",
+    description: "merged 检查 + 工作区干净检查双重保护，不丢代码",
   },
   {
     icon: Code2,
-    title: "简单透明",
-    description: "两个文件，总共 500 多行 Bash，你能读完、能改、能 trust",
+    title: "透明开源",
+    description: "开源可审计，支持 setup.sh 自定义初始化",
   },
   {
     icon: Cpu,
     title: "为 AI 设计",
-    description: "worktree 天然隔离上下文，每个任务一个独立的 Claude 会话，互不干扰",
+    description: "worktree 天然隔离上下文，每个任务独立 Claude 会话，互不干扰",
   },
 ]
 
@@ -49,14 +49,18 @@ export function BenefitsSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid gap-8 rounded-xl border border-border bg-card p-8 sm:grid-cols-3">
+        <div className="mt-16 grid gap-8 rounded-xl border border-border bg-card p-8 sm:grid-cols-4">
           <div className="text-center">
-            <div className="text-4xl font-bold text-amber-400">2</div>
-            <div className="mt-2 text-sm text-muted-foreground">个文件</div>
+            <div className="text-4xl font-bold text-amber-400">1</div>
+            <div className="mt-2 text-sm text-muted-foreground">个 ccl 命令</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-amber-400">500+</div>
-            <div className="mt-2 text-sm text-muted-foreground">行代码</div>
+            <div className="text-4xl font-bold text-amber-400">3</div>
+            <div className="mt-2 text-sm text-muted-foreground">个操作</div>
+          </div>
+          <div className="text-center">
+            <div className="text-4xl font-bold text-amber-400">~</div>
+            <div className="mt-2 text-sm text-muted-foreground">全局安装</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-amber-400">0</div>

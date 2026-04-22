@@ -41,7 +41,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>本质上就是把"并行开发的环境管理"从手动操作变成了一个交互式菜单。</p>
+          <p>一个 ccl 命令搞定 worktree 的创建、进入、清理，以及 AI coding session 的启动。</p>
         </div>
       </div>
     </footer>

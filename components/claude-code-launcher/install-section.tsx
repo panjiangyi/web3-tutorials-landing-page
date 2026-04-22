@@ -6,20 +6,12 @@ import { useState } from "react"
 
 const installCommands = [
   {
-    label: "1. 克隆仓库",
-    command: "git clone https://github.com/panjiangyi/claude-code-launcher.git ~/.ccl",
+    label: "Zsh",
+    command: "npm install -g cc-launch && echo 'eval \"$(command ccl init zsh)\"' >> ~/.zshrc && source ~/.zshrc",
   },
   {
-    label: "2. 添加到 shell 配置 (bash)",
-    command: "echo 'source ~/.ccl/ccl-shell.sh' >> ~/.bashrc",
-  },
-  {
-    label: "或 zsh",
-    command: "echo 'source ~/.ccl/ccl-shell.sh' >> ~/.zshrc",
-  },
-  {
-    label: "3. 重新加载配置",
-    command: "source ~/.bashrc  # 或 source ~/.zshrc",
+    label: "Bash",
+    command: "npm install -g cc-launch && echo 'eval \"$(command ccl init bash)\"' >> ~/.bashrc && source ~/.bashrc",
   },
 ]
 
@@ -71,7 +63,7 @@ export function InstallSection() {
         <div className="mt-12 rounded-xl border border-amber-500/30 bg-amber-500/10 p-6">
           <h3 className="mb-2 text-lg font-semibold text-foreground">然后呢？</h3>
           <p className="mb-4 text-muted-foreground">
-            进入任意 git 仓库，输入 <code className="rounded bg-muted px-2 py-0.5 font-mono text-amber-400">ccl</code> 即可开始使用！
+            在任意 git 仓库的子目录中运行 <code className="rounded bg-muted px-2 py-0.5 font-mono text-amber-400">ccl</code> 即可开始使用！
           </p>
           <Button className="gap-2 bg-amber-500 text-black hover:bg-amber-400" asChild>
             <a href="https://github.com/panjiangyi/claude-code-launcher" target="_blank" rel="noopener noreferrer">

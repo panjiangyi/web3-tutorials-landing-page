@@ -41,22 +41,23 @@ export function DemoSection() {
                 <div className="rounded-lg bg-muted/50 p-4">
                   <p className="text-amber-400">? 选择操作:</p>
                   <p className="mt-1 text-foreground">❯ 新任务</p>
+                  <p className="mt-2 text-amber-400">? 基于分支 (main):</p>
                   <p className="mt-2 text-amber-400">? 任务名称:</p>
-                  <p className="mt-1 text-foreground">fix login timeout</p>
+                  <p className="mt-1 text-foreground">fix-login-timeout</p>
                 </div>
               </div>
 
               <div>
-                <p className="mb-2 text-xs uppercase tracking-wider text-emerald-400">步骤 3: 自动化流程</p>
+                <p className="mb-2 text-xs uppercase tracking-wider text-emerald-400">步骤 3: 自动化流��</p>
                 <div className="space-y-1 rounded-lg bg-muted/50 p-4">
                   <p>
-                    <span className="text-emerald-400">✓</span> 创建 worktree: <span className="text-amber-400">fix-login-timeout</span>
+                    <span className="text-emerald-400">✓</span> 创建 worktree: <span className="text-amber-400">~/.worktrees/payment-service/james-fix-login-timeout</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400">✓</span> 创建分支: <span className="text-amber-400">fix-login-timeout</span>
+                    <span className="text-emerald-400">✓</span> 创建分支: <span className="text-amber-400">james/fix-login-timeout</span>
                   </p>
                   <p>
-                    <span className="text-emerald-400">✓</span> 切换目录
+                    <span className="text-emerald-400">✓</span> 运行 setup.sh (如有)
                   </p>
                   <p>
                     <span className="text-emerald-400">✓</span> 启动 Claude Code
@@ -66,8 +67,23 @@ export function DemoSection() {
 
               <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/10 p-4">
                 <p className="mb-2 text-xs uppercase tracking-wider text-emerald-400">结果</p>
-                <p className="text-emerald-200">修完 → 合到 dev → 回到主工作区 → 继续写报表</p>
+                <p className="text-emerald-200">修完 → PR 到 main → 删除 merged worktree → 继续写报表</p>
               </div>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h4 className="mb-2 text-sm font-semibold text-amber-400">Menu 导航</h4>
+              <p className="text-sm text-muted-foreground">↑↓ 移动，回车确认，鼠标滚轮和点击均可用</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h4 className="mb-2 text-sm font-semibold text-amber-400">Setup 脚本</h4>
+              <p className="text-sm text-muted-foreground">新 worktree 创建后自动运行 <code className="font-mono text-xs">setup.sh</code>，安装依赖或复制 .env</p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6">
+              <h4 className="mb-2 text-sm font-semibold text-amber-400">首次运行</h4>
+              <p className="text-sm text-muted-foreground">首次运行询问主分支名，写入 <code className="font-mono text-xs">config.json</code></p>
             </div>
           </div>
         </div>
